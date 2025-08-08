@@ -1,0 +1,34 @@
+<section class="portfolio-section py-5">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-4">
+      CONTACT SECTION
+      <div class="divider">
+        <span class="line"></span>
+        <span class="star">★</span>
+        <span class="line"></span>
+      </div>
+    </h2>
+
+ <div class="portfolio-container">
+  <div 
+    class="portfolio-item" 
+    *ngFor="let item of portfolioItems" 
+    (click)="openImage(item.image)"
+  >
+    <div 
+      class="portfolio-image" 
+      [style.backgroundImage]="'url(' + item.image + ')'">
+      <div class="overlay" [style.backgroundColor]="item.bgColor">
+    
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+
+  <div class="lightbox" *ngIf="selectedImage" (click)="closeImage()">
+    <img [src]="selectedImage" alt="Preview" />
+  </div>
+</section>
