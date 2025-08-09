@@ -5,7 +5,6 @@ import { FormsModule, NgForm } from '@angular/forms';
   selector: 'app-contact',
   templateUrl: './contact.html',
     imports: [FormsModule],
-
   styleUrls: ['./contact.css']
 })
 export class Contact {
