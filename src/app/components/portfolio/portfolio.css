@@ -1,0 +1,75 @@
+/* Grid layout for images */
+.portfolio-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.portfolio-item {
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+}
+
+.portfolio-image {
+  width: 100%;
+  padding-top: 75%; /* Keeps aspect ratio */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-radius: 10px;
+}
+
+/* Overlay effect */
+.overlay {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* fallback */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  transition: opacity 0.3s ease;
+  border-radius: 10px;
+}
+
+.portfolio-item:hover .overlay {
+  opacity: 0.8;
+}
+
+.view-text {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+
+
+@media (max-width: 768px) {
+  .portfolio-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 500px) {
+  .portfolio-container {
+    grid-template-columns: 1fr;
+  }
+}

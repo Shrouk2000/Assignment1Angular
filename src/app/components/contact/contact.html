@@ -1,0 +1,28 @@
+<section class="contact-section py-5">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-4">
+      CONATCT SECTION
+      <div class="divider">
+        <span class="line"></span>
+        <span class="star">★</span>
+        <span class="line"></span>
+      </div>
+    </h2>
+
+    <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" class="mx-auto" style="max-width: 600px;">
+      <div class="mb-3">
+        <input type="text" name="userName" ngModel placeholder="userName" class="form-control">
+      </div>
+      <div class="mb-3">
+        <input type="number" name="userAge" ngModel placeholder="userAge" class="form-control">
+      </div>
+      <div class="mb-3">
+        <input type="email" name="userEmail" ngModel placeholder="userEmail" class="form-control">
+      </div>
+      <div class="mb-3">
+        <input type="password" name="userPassword" ngModel placeholder="userPassword" class="form-control">
+      </div>
+      <button class="btn btn-success" type="submit">send Message</button>
+    </form>
+  </div>
+</section>

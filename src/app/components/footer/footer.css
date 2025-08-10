@@ -1,0 +1,13 @@
+footer{
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+}
+.btn-social {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  padding: 0;
+  font-size: 16px;
+}
